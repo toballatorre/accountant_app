@@ -1,4 +1,5 @@
 import 'package:accountant_app/components/counterbtn.dart';
+import 'package:accountant_app/components/display_counter.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -23,21 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: _counter > 0 ? () => _updateCounter(-1) : null,
             ),
             const SizedBox(width: 20),
-            Card.outlined(
-              child: SizedBox(
-                width: 200,
-                height: 200,
-                child: Center(
-                  child: Text(
-                    _counter.toString(),
-                    style: Theme.of(context)
-                        .textTheme
-                        .displayLarge!
-                        .copyWith(fontSize: 100),
-                  ),
-                ),
-              ),
-            ),
+            DisplayCounter(_counter),
             const SizedBox(width: 20),
             Counterbtn(
               icon: Icons.add,
