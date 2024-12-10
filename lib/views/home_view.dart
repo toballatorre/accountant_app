@@ -1,4 +1,4 @@
-import 'package:accountant_app/components/counterbtn.dart';
+import 'package:accountant_app/components/counter_btn.dart';
 import 'package:accountant_app/components/display_counter.dart';
 import 'package:flutter/material.dart';
 
