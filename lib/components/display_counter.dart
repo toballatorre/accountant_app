@@ -1,8 +1,9 @@
+import 'package:accountant_app/views/counter_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class DisplayCounter extends StatelessWidget {
-  const DisplayCounter(this.counter, {super.key});
-  final int counter;
+  const DisplayCounter({super.key});
   static const _colors = <int>[
     0xFF8FE000,
     0xFFC5CD00,
@@ -18,6 +19,9 @@ class DisplayCounter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Getting the counter value
+    final counter = context.watch<CounterProvider>().counter;
+
     final indexColor = counter < _colors.length ? counter : _colors.length - 1;
     final colorSelected = Color(_colors[indexColor]);
     return Card.outlined(

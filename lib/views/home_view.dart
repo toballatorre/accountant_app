@@ -26,7 +26,7 @@ class MyHomePage extends StatelessWidget {
                     onPressed: counter > 0 ? provider.decrement : null,
                   ),
                   const SizedBox(width: 20),
-                  DisplayCounter(counter),
+                  const DisplayCounter(),
                   const SizedBox(width: 20),
                   // Increment
                   Counterbtn(
